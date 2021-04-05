@@ -154,10 +154,10 @@
 				success: function(result){
 					result.innerHTML =
           $("#result").html(
-              "<span class='u-align-center u-custom-font u-text u-text-2'>(" + "색깔: "+ result["color"] + ")<br></span>"+    
-              "<span class='u-align-center u-custom-font u-text u-text-2'>(" + "옷 종류: " + result["cloth"] + ")</span><br>" +                            
-              "<audio autoplay controls> <source src='" + result["color_mp3"] + "'" + 'type="audio/mp3"> </audio>' +
-              "<audio autoplay controls> <source src='" + result["cloth_mp3"] + "'" + 'type="audio/mp3"> </audio>');
+              "<span class='u-align-center u-custom-font u-text u-text-3'>" + "색상: "+ result["color"] + "</span>" + 
+              "<audio autoplay controls> <source src='" + result["color_mp3"] + " ' " + 'type="audio/mp3"> <br></audio>'+              
+              "<span class='u-align-center u-custom-font u-text u-text-3'>" + "옷 종류: " + result["cloth"] + "</span>" +
+              "<audio autoplay controls> <source src='" + result["cloth_mp3"] + " ' " + 'type="audio/mp3"> <br></audio>');
   
           // console.log(result);
 				}
