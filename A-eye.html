@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+    <meta charset="utf-8">
+    <meta name="keywords" content="A-eye">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <meta name="generator" content="Nicepage 3.10.2, nicepage.com">
+    <meta property="og:title" content="index">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:url" content="index.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>A-eye</title>
+    
+    <!-- <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="A-eye.css" media="screen"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/A-eye.css') }}" media="screen">
+
+
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <!-- <link rel="canonical" href="index.html"> -->
+
+
+    <style type="text/css" class="custom-font-css">
+    @font-face {
+      font-family: 'BellMTBold';
+      font-style: normal;
+      font-weight: 400;
+      src: url(static/img/BellMTBold.ttf);
+      }
+      @font-face {
+        font-family: 'BellMT';
+        font-style: normal;
+        font-weight: 400;
+        src: url(static/img/BellMT.ttf);
+      }
+      .img_wrap {
+        width: 300px;
+        margin-top: 50px;
+      }
+      .img_wrap img {
+        max-width: 100%;
+      }
+    </style>
+
+    <!-- <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script> -->
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}" defer=""></script>
+    <!-- <script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/background.cycle.js') }}"></script>
+    <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script> -->
+
+    <style>
+      body{
+        background-image: url("{{ url_for('static', filename='img/xz.jpg') }}");
+      }
+    </style>
+    <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "",
+      "url": "index.html"
+      }
+    </script>
+     
+  </head>
+
+
+
+  <body class="u-body u-overlap">
+    <section class="u-clearfix u-image u-section-1 " id="carousel_2493" data-image-width="1980" data-image-height="1320">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="text1 u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                
+                <div class="u-container-layout u-container-layout-1">
+                  
+                  <div class="searchimg u-container-style u-grey-15 u-group u-radius-30 u-shape-round u-group-1">
+                    <div class="u-container-layout u-valign-top u-container-layout-2">
+                      <div class="preview" style="max-width: 100%; text-align: center; margin-top: 0px auto; margin-bottom: 0px auto;">
+                        <img style="width: 424.99px; height: 267px;" id="preview-image" img src="{{ url_for('static', filename='img/aa.jpg') }}">
+                        <!-- <img style="width: 424.99px; height: 267px;" id="preview-image" img src="{{ url_for('static', filename='static/img/aa.jpg') }}"> -->
+                        <!-- https://dummyimage.com/500x500/ffffff/000000.png&text=preview+image -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 아래 원클릭과 연동 form -->
+                  <form id="FORM" action = 'http://localhost:5000/fileUpload' method="POST" enctype="multipart/form-data">
+
+                    <div class="u-image-contain">
+                      <input type="file" id="file" name="file" accept="image/*">
+                    </div>
+
+                    <div>
+                      <!--
+                      <button id="btnSubmit">Submit</button>
+                      -->
+                      <input type='button' id="btnSubmit" onclick="uploadImage()"></input>
+                    </div>
+
+                  </form>
+
+                  <!-- a태그를 원클릭으로 연결 -->
+                  <a href="#" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1" onclick="$('#btnSubmit').click();">submit</a>
+                  <a href="#" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2" onclick="$('#file').click();">upload</a>
+                
+                </div>
+
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-3">
+                  <h1 class="u-custom-font u-text u-text-1">A-eye</h1>
+
+                  <h3 id="result_old" class="u-align-center u-custom-font u-text u-text-2">의류 색상 및 종류 판별기입니다.
+                  </h3>
+                  <span id="result"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>   
+  </body>
+
+
+
+  <script>
+
+ function uploadImage()
+ {
+  
+  var form = $('#FORM')[0];
+	var formData = new FormData(form);
+	formData.append("file", $("#file")[0].files[0]);
+	
+
+	$.ajax({
+		    url: '/fileUpload',
+				processData: false,
+				contentType: false,
+				data: formData,
+				type: 'POST',
+        dataType:"json",
+				success: function(result){
+					result.innerHTML =
+          $("#result").html(
+              "<span class='u-align-center u-custom-font u-text u-text-2'>(" + "색깔: "+ result["color"] + ")<br></span>"+    
+              "<span class='u-align-center u-custom-font u-text u-text-2'>(" + "옷 종류: " + result["cloth"] + ")</span><br>" +                            
+              "<audio autoplay controls> <source src='" + result["color_mp3"] + "'" + 'type="audio/mp3"> </audio>' +
+              "<audio autoplay controls> <source src='" + result["cloth_mp3"] + "'" + 'type="audio/mp3"> </audio>');
+  
+          // console.log(result);
+				}
+		});
+  }
+
+    function readImage(input) {
+      // 인풋 태그에 파일이 있는 경우\\
+
+      if(input.files && input.files[0]) {
+        // 이미지 파일인지 검사 (생략)
+        // FileReader 인스턴스 생성
+        const reader = new FileReader()
+        // 이미지가 로드가 된 경우
+        reader.onload = e => {        
+          const previewImage = document.getElementById("preview-image")
+          previewImage.src = e.target.result
+        }
+        // reader가 이미지 읽도록 하기
+        reader.readAsDataURL(input.files[0])
+      }
+    }
+
+    // input file에 change 이벤트 부여
+    const inputImage = document.getElementById("file")
+    inputImage.addEventListener("change", e => {
+      readImage(e.target)
+    })
+
+  
+
+
+  </script>
+
+</html>
